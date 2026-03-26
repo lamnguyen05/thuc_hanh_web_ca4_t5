@@ -4,17 +4,83 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>BookStore</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Dancing+Script:wght@600&family=Kanit&family=Lora:wght@500;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="path/to/fork-awesome/css/fork-awesome.min.css">
     <link rel="stylesheet" href="styles/main.css" />
+    <style>
+        /* Định dạng cho khung chứa chính */
+        .big_box {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        }
+       
+        /* Khoảng cách giữa các phần top, mid, bot */
+        .big_box_top {
+        margin-bottom: 40px; 
+        }
+       
+        /* Tiêu đề của mỗi phần (VD: Sản phẩm mới) */
+        .section-title {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        }
+       
+        /* Khung Flexbox chứa các sản phẩm */
+        .product-list {
+        display: flex;
+        justify-content: space-between; /* Dàn đều các sản phẩm sang 2 bên */
+        gap: 15px; /* Khoảng cách giữa các sản phẩm */
+        }
+       
+        /* Định dạng cho từng thẻ sản phẩm */
+        .product-item {
+        width: 32%; /* Mỗi sản phẩm chiếm khoảng 1/3 chiều rộng */
+        text-align: center;
+        box-sizing: border-box;
+        }
+       
+        /* Tên sản phẩm */
+        .product-name {
+        color: red;
+        font-weight: bold;
+        font-size: 15px;
+        margin-bottom: 10px;
+        }
+       
+        /* Hình ảnh sản phẩm */
+        .product-item img {
+        width: 100%;
+        max-width: 130px; /* Giới hạn chiều rộng ảnh để không bị vỡ bố cục */
+        height: auto;
+        margin-bottom: 10px;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* Thêm chút bóng đổ cho sách đẹp hơn */
+        }
+       
+        /* Giá tiền và nút đặt mua */
+        .product-price {
+        color: red;
+        font-weight: bold;
+        font-size: 14px;
+        }
+       
+        .btn-buy {
+        color: #333;
+        font-weight: normal;
+        cursor: pointer;
+        margin-left: 5px;
+        }
+        
+        .btn-buy:hover {
+        color: blue; /* Đổi màu khi di chuột vào nút Đặt mua */
+        }
+       </style>
 </head>
 
 <body>
-
     <div id="container">
 
         <!-- Hình Banner hoặc Logo  -->
@@ -83,51 +149,57 @@
                         <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Ngoại Ngữ</a>
                     </li>
                 </ul>
+                <div class="box">
+                    <div class="title">SP Khuyến mãi</div>
+                    <div class="box_content" style="height:190px;">
+                    <!-- Chèn thẻ marquee chạy các sp khuyến mãi ở đây -->
+                        Chèn marquee chạy từ dưới lên!
+                    </div>
                 </div>
-            </div>
+
+                </div>
+        </div>
 
             <!-- CONTENT hiển thị ở giữa  -->
-            <div id="content" style="height: auto;">
-                <div class="center_title">43 Bí mật bán hàng online tuyệt đỉnh</div>
-                <div class="big_box" style="align-content: center;">
-                    <div class="big_box_top"></div>
-                    <div class="big_box_mid">
-                        <img src="images/Sach_4.png" width="250" alt="S6 Edge" align="left" />
+            <div id="content">
+                <div class="big_box">
 
-                        <strong>Trạng thái:</strong> <span class="spec_value">Còn hàng</span><br />
-                        <strong>Thời gian bảo hành:</strong> <span class="spec_value">12 tháng</span><br />
-                        <strong>Cuốn sách 43 Bí Mật Bán Hàng Online Tuyệt Đỉnh mang đến cho bạn:</strong></b>
-
-                            <ul>
-                                <li>Khách hàng thường làm gì trên mạng, xu hướng mua hàng của họ là gì?</li>
-                                <li>Tìm kiếm nguồn hàng ở đâu?</li>
-                                <li>Các công cụ hỗ trợ bán hàng online tối ưu</li>
-                                <li>20 cách tìm kiếm khách hàng tiềm năng</li>
-                            </ul>
-                        <strong>Khuyến mãi:</strong> <span class="spec_value">Không có</span><br />
-                        <strong>Giá: </strong>
-                        <span style="color: red; font-weight: bold;">184,000</span>
-
-                        <strong><h2>Thông tin sản phẩm</h2></strong>
-                        <strong>Bạn đang muốn bán hàng onl</strong>
-                        <p> Điều gì giúp công việc bán hàng của bạn thành công bền vững? Đây là điều đầu tiên cuốn sách 43 Bí Mật Bán Hàng Online Tuyệt Đỉnh của MBA Phan Anh đề cập, “tư duy lựa chọn sản phẩm và xác định đối tượng khách hàng bạn muốn phục vụ” là ai ?</p>
-                        <img src="images/Sach_5.jpg" width="300px" height="auto" style="border: 5px black solid"> 
-                        <img src="images/Sach_6.jpg" alt="" width="300" style="border: 5px black solid; margin-top: 5px;">       
+                    <div class="big_box_top">
+                    <div class="section-title">Sản phẩm mới</div>
+                    <div class="product-list">
+                    <div class="product-item">
+                    <div class="product-name">Quản trị tài chính</div>
+                    <img src="images/Book_table_1.jpg" alt="Quản trị tài chính">
+                    <div class="product-price">450.000 đ <span class="btn-buy">🛒 Đặt mua</span></div>
                     </div>
-                    
-                    <div class="big_box_bot"></div>
+                    <div class="product-item">
+                    <div class="product-name">Tăng Lương</div>
+                    <img src="images/Book_table_2.png" alt="Tăng Lương">
+                    <div class="product-price">125.000 đ <span class="btn-buy">🛒 Đặt mua</span></div>
+                    </div>
+                    <div class="product-item">
+                    <div class="product-name">Khởi Nghiệp Online</div>
+                    <img src="images/Book_table_3.png" alt="Khởi Nghiệp">
+                    <div class="product-price">151.000 đ <span class="btn-buy">🛒 Đặt mua</span></div>
+                    </div>
+                    </div>
+                    </div>
                 </div>
-               
+                    
+    
+            
+                   
+                   
+            
             </div>
 
             <!-- MENU bên phải  -->
             <div id="right">
-                <!-- Cần bổ sung thêm (tương tự như <div id="left"> ) -->
-                    <div class="title">Hàng sản phẩm</div>
+                <div class="title">Hãng sản xuất</div>
                 <ul class="categories">
 
                     <li class="lmenu1">
-                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Chọn mua 365</a>
+                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;CHONMUA 365</a>
                     </li>
                     <li class="lmenu2">
                         <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Deli</a>
@@ -136,23 +208,26 @@
                         <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Thiên Long</a>
                     </li>
                     <li class="lmenu2">
-                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Klong</a>
+                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;KLONG</a>
                     </li>
                     <li class="lmenu1">
-                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Lazy box</a>
+                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Lazy Box</a>
                     </li>
                     <li class="lmenu2">
-                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;M & G</a>
+                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;M&G</a>
                     </li>
                 </ul>
+                <div class="box">
+                    <div class="title">Quảng cáo</div>
+                    <div class="box_content" style="height:190px; text-align: center;">
+                        Chèn hình quảng cáo!
+                    </div>
                 </div>
             </div>
-
-
-        </div>
-      
-       
-
+            <div style="clear:both; height:10px;"></div>
+            <div id="footer">
+                footer
+            </div>
 
     </div>
 </body>
